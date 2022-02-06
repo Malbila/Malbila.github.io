@@ -1,0 +1,14 @@
+{
+  "name": "bootstrap_4",
+  "version": "1.0.0",
+  "description": "responsive_site",
+  "main": "index.js",
+  "scripts": {
+    "test": "start project"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.2"
+  }
+}
