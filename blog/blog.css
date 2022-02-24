@@ -1,0 +1,41 @@
+.blog-container {
+    background-color: rgb(160, 190, 190);
+    border-radius: 32px;
+}
+
+#blog-body {
+    text-indent: 50px;
+    margin-top: 32px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+p {
+    text-indent: 50px;
+    margin-top: 32px;
+    font-size: 1.25rem;
+    word-spacing: 12px;
+    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
+.jumbotron-container {
+    flex: auto;
+    justify-content: center;
+    margin-bottom: 32px;
+    background-color: rgba(8, 82, 151, 0.4);
+}
+
+.jumbotron {
+    margin-left: 32px;
+}
+
+.pub {
+    background-color: aquamarine;
+    border-radius: 32px;
+}
+
+.info {
+    background-color:rgb(123, 168, 153);
+    border-radius: 32px;
+}

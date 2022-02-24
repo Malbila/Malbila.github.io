@@ -28,12 +28,24 @@
 
 }
 
-.home-slogan {
+p {
+	font-size: 1.2rem;
+}
+
+.home-slogan, .courses {
 	background-color: #1d8a65c5;
 }
 
+.course-header {
+	color: aliceblue;
+}
+
 .nav-link {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+}
+
+.navbar-nav > li {
+	margin: 0 10px;
 }
 
 .card-services {
@@ -42,9 +54,11 @@
 
 .card-body {
 	background-color: darkgray;
+	border-radius: 10px;
 }
 
 .card {
 	background-color: rgb(37, 107, 107);
 	border-radius: 25px;
 }
+
