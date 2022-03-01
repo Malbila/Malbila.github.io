@@ -62,3 +62,54 @@ p {
 	border-radius: 25px;
 }
 
+.dropdown {
+	position: relative;
+}
+
+.active, .dropdown .nav-item:hover {
+	background-color: #336b49;
+	border-radius: 10px;
+}
+
+.menu-bar {
+	display: none;
+}
+
+.dropdown .nav-item:hover .menu-bar {
+	display: block;
+	position: absolute;
+	background: #336b49;
+	margin-top: 0px;
+	border-radius: 15px;
+	margin-left: -15px;
+}
+
+.dropdown .nav-item:hover .menu-bar ul {
+	display: block;
+	margin: 10px;
+}
+
+.dropdown .nav-item:hover .menu-bar ul li {
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+
+.dropdown .nav-item:hover .menu-bar ul li a {
+	color: white;
+}
+
+.dropdown .nav-item:hover .menu-bar ul li:last-child {
+	border-bottom: none;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
