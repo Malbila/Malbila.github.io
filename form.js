@@ -1,0 +1,2 @@
+const form = document.getElementById('form')
+form.innerHTML = '<form method="" action=""> <div class="form-group my-3"><label for=" nameInput">Votre nom et prenom <b>*</b></label> <input type="text" class="form-control" placeholder="Complete Name" id="nameInput" required></div> <div class="form-group my-3"> <label for="note">Email <b>*</b></label> <input type="email" class="form-control" placeholder="Your email" id="emailInput" required> </div> <button type="submit" class="btn btn-primary mx-auto">Envoyez</button></form>'

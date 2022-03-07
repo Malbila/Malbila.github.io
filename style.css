@@ -18,7 +18,7 @@
 
 .banne {
 	color: #373684;
-	color: rgb(133, 2, 189);
+	color: rgb(44, 29, 112);
 }
 
 .introduction > p {
@@ -78,10 +78,11 @@ p {
 .dropdown .nav-item:hover .menu-bar {
 	display: block;
 	position: absolute;
+
 	background: #336b49;
 	margin-top: 0px;
 	border-radius: 15px;
-	margin-left: -15px;
+	margin-left: -50px;
 }
 
 .dropdown .nav-item:hover .menu-bar ul {
@@ -90,7 +91,7 @@ p {
 }
 
 .dropdown .nav-item:hover .menu-bar ul li {
-	width: 150px;
+	width: 300px;
 	padding: 10px;
 	border-bottom: 1px dotted #fff;
 	background: transparent;
@@ -113,3 +114,4 @@ ul {
 a {
 	text-decoration: none;
 }
+

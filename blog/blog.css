@@ -40,8 +40,8 @@ p {
     border-radius: 32px;
 }
 
-.active {
-	background-color: #373684;
+.active, .nav-item:hover {
+	background-color: #336b49;;
 	border-radius: 10px;
 }
 
@@ -51,4 +51,18 @@ p {
 
 .navbar-nav > li {
 	margin: 0 10px;
+}
+
+.form-wrapper {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	justify-content: center;
+    
+}
+
+.form-control {
+    @media (max-width: 600px) {
+        min-width: 500px;
+    }
 }
