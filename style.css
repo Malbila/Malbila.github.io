@@ -71,6 +71,10 @@ p {
 	border-radius: 10px;
 }
 
+.dropdown .nav-item:hover {
+	color: #336b49;
+}
+
 .menu-bar {
 	display: none;
 }

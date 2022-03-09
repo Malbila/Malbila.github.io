@@ -54,15 +54,19 @@ p {
 }
 
 .form-wrapper {
-	display: flex;
+	/* display: flex;
 	flex-direction: column;
     align-items: center;
-	justify-content: center;
+	justify-content: center; */
+    max-width: 600px;
     
 }
 
 .form-control {
-    @media (max-width: 600px) {
-        min-width: 500px;
+    @media (min-width: 600px) {
+        max-width: 600px;
     }
 }
+
+
+/* https://www.codeur.com/-sandaogom */
