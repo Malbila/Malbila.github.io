@@ -119,3 +119,9 @@ a {
 	text-decoration: none;
 }
 
+ul.navbar-right{
+	position: absolute;
+	top: 20px;
+	right: -20px;
+}
+
