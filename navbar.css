@@ -1,0 +1,42 @@
+
+.nav-right {
+    display:flex;
+    justify-content: flex-end;
+    min-width: 300px;
+    align-items: center;
+}
+
+@media (max-width: 400px) {
+    .nav-right {
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: 12px
+    }
+    .nav-right a {
+        margin: 0 5px;
+        color: #000;
+        text-decoration: none;
+    }
+    .nav-right input {
+        border: none;
+        width: 130px;
+    }
+}
+
+.nav-right input {
+    text-align: center;
+    background: aliceblue;
+    color: #000;
+    border-radius: 10px;
+    outline: none;
+    height: 40px;
+    margin-right: 12px;
+    width: 400px
+}
+
+.nav-right a {
+    margin: 0 12px;
+    color: #000;
+    text-decoration: none;
+}

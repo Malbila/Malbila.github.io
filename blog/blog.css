@@ -1,6 +1,7 @@
 .blog-container {
-    background-color: rgb(160, 190, 190);
-    border-radius: 32px;
+    background-color: rgba(160, 190, 190, 0.4);
+    box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.7);
+    /* border-radius: 32px; */
 }
 
 #blog-body {
@@ -32,12 +33,19 @@ p {
 
 .pub {
     background-color: aquamarine;
-    border-radius: 32px;
+    box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.7);
+    transition: all linear 1s;
+    /* border-radius: 32px; */
+}
+
+.pub:hover {
+    transform: scale(1.5) translateX(-300px);
 }
 
 .info {
     background-color:rgb(123, 168, 153);
-    border-radius: 32px;
+    box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.7);
+    /* border-radius: 32px; */
 }
 
 .active, .nav-item:hover {
@@ -67,6 +75,33 @@ p {
         max-width: 600px;
     }
 }
+
+.backGround {
+    position: relative;
+    background: url('../Images/bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    height: 250px;
+}
+
+@media (min-width: 500px) {
+    .mobileGround {
+        display: none;
+    }
+    .heroText {
+        position: absolute;
+        top: 100px;
+        left: 20vw;
+        color: red;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 500px) {
+    .backGround {
+        display: none;
+    }
+}
+
 
 
 /* https://www.codeur.com/-sandaogom */
