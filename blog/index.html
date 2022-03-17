@@ -16,6 +16,7 @@
 	<link rel="shortcut icon" href="../Images/logo.png">
 
 	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../style.css" />
 	<link rel="stylesheet" href="./blog.css" />
 
 
@@ -28,7 +29,74 @@
 		<div class="bg-dark">
 			<div class="container">
 				<div class="row">
-					<nav class="col navbar navbar-expand-sm navbar-dark">
+					<div class="col">
+						<div class="col">
+							<!-- <div id="responsive"></div> -->
+							<div id="root">
+								<div id="topnav" class="topnav">
+									<a id="home_link" class="navbar-brand" href="./">
+										<img src="../Images/logo.png" width = "50" height = "50" alt="Logo du site">  
+										Info School
+									</a>
+							  
+								  <!-- Classic Menu -->
+								  <nav role="navigation" id="topnav_menu" class="dropdown">
+									<a class="topnav_link" href="./">Accueil</a>
+									<a class="topnav_link" href="#">Services
+										<div class="menu-bar">
+											<ul>
+												<li><a href="services/">Développement web et mobile</a></li>
+												<li><a href="#">Marketing</a></li>
+												<li><a href="#">Mentorat</a></li>
+												<li><a href="#">SEO</a></li>
+											</ul>
+										</div>
+									</a>
+									<a class="topnav_link" href="#">Cours
+										<div class="menu-bar">
+											<ul>
+												<li><a href="cours/">Développement</a></li>
+												<li><a href="#">Marketing digital</a></li>
+												<li><a href="#">Entrepreunariat</a></li>
+												<li><a href="#">Soft Skills</a></li>
+												<li><a href="#">Design</a></li>
+											</ul>
+										</div>
+									</a>
+									<a class="topnav_link" href="blog/">Blog</a>
+									<a class="topnav_link" href="#">Espace clients
+										<div class="menu-bar">
+											<ul>
+												<li><a href="espace-clients/">Témoignage</a></li>
+												<li><a href="espace-clients/">Projets</a></li>
+												<li><a href="message/">Message</a></li>
+											</ul>
+										</div>
+									</a>
+									<a class="topnav_link" href="faq/">FAQ</a>
+								  </nav>
+							  
+								  <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+									<!-- Some spans to act as a hamburger -->
+									<span></span>
+									<span></span>
+									<span></span>
+								  </a>
+							  
+								  <!-- Responsive Menu -->
+								  <nav role="navigation" id="topnav_responsive_menu">
+									<ul>
+										<li><a href="../">Accueil</a></li>
+									  <li><a href="./cours/">Cours</a></li>
+									  <li><a href="./services/">Services</a></li>
+									  <li><a href="./espace-clients/">Espace clients</a></li>
+									  <li><a href="./faq/">FAQ</a></li>
+									</ul>
+								  </nav>
+								</div>
+							  </div>
+						</div>
+					<!-- <nav class="col navbar navbar-expand-sm navbar-dark">
 						<a class="navbar-brand" href="../">
 							<img src="../Images/logo.png" width = "50" height = "50" alt="Logo du site">  
 							Info School
@@ -52,7 +120,8 @@
 								</li>
 							</ul>
 						</div>
-					</nav>
+					</nav> -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -162,6 +231,7 @@
 
 	<script src="news1.js"></script>
 	<script src="../form.js"></script>
+	<script src="../responsive.js"></script>
 
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
