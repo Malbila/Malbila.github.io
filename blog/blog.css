@@ -38,9 +38,9 @@ p {
     /* border-radius: 32px; */
 }
 
-.pub:hover {
+/* .pub:hover {
     transform: scale(1.5) translateX(-300px);
-}
+} */
 
 .info {
     background-color:rgb(123, 168, 153);
