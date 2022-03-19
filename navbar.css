@@ -36,11 +36,11 @@
     .nav-right {
         display:flex;
         min-width: 280px;
-        justify-content: flex-start;
+        justify-content: flex-end;
         align-items: center;
     }
     .nav-right a {
-        margin: 0 5px;
+        margin: 0 12px;
         color: #000;
         text-decoration: none;
     }

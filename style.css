@@ -317,3 +317,15 @@ ul.navbar-right{
 	right: -20px;
 }
 
+.courses-list ol {
+  font-size: 26px;
+  color: #4644b9;
+  font-weight: 900;
+}
+
+.sevices-list ol {
+  font-size: 26px;
+  color: #4644b9;
+  font-weight: 900;
+}
+
