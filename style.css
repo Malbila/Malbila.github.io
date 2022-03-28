@@ -329,3 +329,10 @@ ul.navbar-right{
   font-weight: 900;
 }
 
+#article img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  margin: 15px;
+}
+
