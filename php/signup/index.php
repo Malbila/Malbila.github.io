@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+
     <title>Info School</title>
 
-    <link rel="shortcut icon" href="../Images/logo.png">
+    <link rel="shortcut icon" href="../../Images/logo.png">
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../style.css" />
 </head>
-
 <body>
 
-    <div class="bg-dark">
+<div class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div id="root">
                         <div id="topnav" class="topnav">
-                            <a id="home_link" class="navbar-brand" href="../">
-                                <img src="../Images/logo.png" width = "50" height = "50" alt="Logo du site">  
+                            <a id="home_link" class="navbar-brand" href="../../">
+                                <img src="../../Images/logo.png" width = "50" height = "50" alt="Logo du site">  
                                 Info School
                             </a>
                       
                           <!-- Classic Menu -->
                           <nav role="navigation" id="topnav_menu" class="dropdown-main">
                             <ul class="dropdown">
-                              <li class="topnav_link"><a href="../">Accueil</a></li>
+                              <li class="topnav_link"><a href="../../">Accueil</a></li>
                               <li class="topnav_link"><a href="javascript:void(0)">Services</a>
                                   <div class="menu-bar">
                                       <ul>
@@ -44,7 +49,7 @@
                               <li class="topnav_link"><a href="javascript:void(0)">Cours</a>
                                   <div class="menu-bar">
                                       <ul>
-                                          <li><a href="../cours/">Développement</a></li>
+                                          <li><a href="../../cours/">Développement</a></li>
                                           <li><a href="#">Marketing digital</a></li>
                                           <li><a href="#">Entrepreunariat</a></li>
                                           <li><a href="#">Soft Skills</a></li>
@@ -52,17 +57,17 @@
                                       </ul>
                                   </div>
                               </li>
-                              <li class="topnav_link"><a href="../blog/">Blog</a></li>
+                              <li class="topnav_link"><a href="../../blog/">Blog</a></li>
                               <li class="topnav_link"><a href="javascript:void(0)">Espace clients</a>
                                   <div class="menu-bar">
                                       <ul>
-                                          <li><a href="../espace-clients/">Témoignage</a></li>
-                                          <li><a href="../espace-clients/">Projets</a></li>
-                                          <li><a href="../message/">Message</a></li>
+                                          <li><a href="../../espace-clients/">Témoignage</a></li>
+                                          <li><a href="../../espace-clients/">Projets</a></li>
+                                          <li><a href="../../message/">Message</a></li>
                                       </ul>
                                   </div>
                               </li>
-                              <li class="topnav_link"><a href="../faq/">FAQ</a></li>
+                              <li class="topnav_link"><a href="../../faq/">FAQ</a></li>
                           </ul>
                         </nav>
                       
@@ -76,11 +81,11 @@
                           <!-- Responsive Menu -->
                           <nav role="navigation" id="topnav_responsive_menu">
                             <ul>
-                                <li><a href="../">Accueil</a></li>
-                                <li><a href="../blog/">Blog</a></li>
-                                <li><a href="../services/">Services</a></li>
-                                <li><a href="../espace-clients/">Espace clients</a></li>
-                                <li><a href="../faq/">FAQ</a></li>
+                                <li><a href="../../">Accueil</a></li>
+                                <li><a href="../../blog/">Blog</a></li>
+                                <li><a href="../../services/">Services</a></li>
+                                <li><a href="../../espace-clients/">Espace clients</a></li>
+                                <li><a href="../../faq/">FAQ</a></li>
                             </ul>
                           </nav>
                         </div>
@@ -90,56 +95,35 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container content">
         <div class="row">
-            <div class="col">
-                <h1 class="jumbotron">
-                    Cours
-                </h1>
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="row courses-list">
-            <div class="col mt-4">
-                <ol>
-                    <li><a href="../cours/">Développement</a></li>
-                    <li><a href="#">Marketing digital</a></li>
-                    <li><a href="#">Entrepreunariat</a></li>
-                    <li><a href="#">Soft Skills</a></li>
-                    <li><a href="#">Design</a></li>
-                </ol>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <ul id="article"></ul>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="bg-light mt-5">
-        <div class="container-fluid">
-            <div class="row pt-4 pb-3">
-                <div class="col">
-                    <ul class="list-inline text-center">
-                        <li class="list-inline-item">
-                            <a href="#">À propos</a>
-                        </li>
-                        <li class="list-inline-item">&middot;</li>
-                        <li class="list-inline-item">
-                            <a href="#">Vie privée</a>
-                        </li>
-                        <li class="list-inline-item">&middot;</li>
-                        <li class="list-inline-item">
-                            <a href="#">Conditions d'utilisations</a>
-                        </li>
-                    </ul>
+            <div class="col-12 col-sm-6 text-center">
+                <br /><br /><br /><h1>User's registration</h1> <br /><br />
+                <div>
+                    <p>
+                        <form action="signupDB.php" method="post">
+                            <div class="input-group mb-4 text-center">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><img src="../../Images/user.png" class="bordure" width = "23" height = "23" alt="user"></span>
+                                </div>
+                                <input type="text" class="form-control" name="name" id="Uname" placeholder="Username" required = "required">
+                            </div>
+                            <div class="input-group mb-4 text-center input">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><img src="../../Images/pwd.png" class="bordure" width = "23" height = "23" alt="pwd"></span>
+                                </div>
+                                <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" required = "required">
+                            </div>
+                            <div class="input-group mb-4 text-center">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><img src="../../Images/pwd.png" class="bordure" width = "23" height = "23" alt="pwd"></span>
+                                </div>
+                                <input type="password" class="form-control" name="passconf" id="pass" placeholder="Confirm Password" required = "required">
+                            </div>        
+                            <button class="btn btn-success" type="submit" >Save</button>
+                        </form>
+                    </p>
                 </div>
             </div>
         </div>
@@ -151,7 +135,7 @@
 
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <script src="../responsive.js"></script>
-    <script src="./article.js"></script>
+    <script src='../../responsive.js'></script>
+
 </body>
 </html>

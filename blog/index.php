@@ -26,7 +26,7 @@
 	 </head>
 
 	<body>
-		<div class="bg-dark">
+		<div class="dark-nav">
 			<div class="container">
 				<div class="row">
 					<div class="col">
@@ -35,8 +35,8 @@
 							<div id="root">
 								<div id="topnav" class="topnav">
 									<a id="home_link" class="navbar-brand" href="../">
-										<img src="../Images/logo.png" width = "50" height = "50" alt="Logo du site">  
-										Info School
+										<img class="brand" src="../Images/brand.jpg" width = "50" height = "50" alt="Logo du site">  
+										Le-BDCI
 									</a>
 							  
 								  <!-- Classic Menu -->
@@ -91,7 +91,7 @@
 								  <nav role="navigation" id="topnav_responsive_menu">
 									<ul>
 										<li><a href="../">Accueil</a></li>
-									  	<li><a href="../cours/courses.html">Cours</a></li>
+									  	<li><a href="../cours/courses/">Cours</a></li>
 									  	<li><a href="../services/">Services</a></li>
 									  	<li><a href="../espace-clients/">Espace clients</a></li>
 									  	<li><a href="../faq/">FAQ</a></li>
@@ -100,38 +100,13 @@
 								</div>
 							  </div>
 						</div>
-					<!-- <nav class="col navbar navbar-expand-sm navbar-dark">
-						<a class="navbar-brand" href="../">
-							<img src="../Images/logo.png" width = "50" height = "50" alt="Logo du site">  
-							Info School
-						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div id="navbarSupportedContent" class="collapse navbar-collapse">
-							<ul class="navbar-nav mr-auto">
-								<li class="nav-item ">
-									<a class="nav-link" href="../">Accueil</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="../cours/">Cours</a>
-								</li>
-                                <li class="nav-item active" >
-									<a class="nav-link" href="./">Blog</a>
-								</li>
-								<li class="nav-item" >
-									<a class="nav-link" href="../espace-clients/">Espace clients</a>
-								</li>
-							</ul>
-						</div>
-					</nav> -->
 					</div>
 				</div>
 			</div>
 		</div>
 
         <div class="container jumbotron-container">
-            <div class="row mb-4">
+            <div class="row my-4">
                 <div class="col backGround">
                     <div class="jumbotron">
                         <h1 class="heroText">Le blog du codeur inspiré</h1>
@@ -140,17 +115,6 @@
             </div>
         </div>
 
-		<div class="container bg-grey">
-			<div class="row">
-				<div class="col second-navbar-main m-4">
-					<ul class=" list-inline second-navbar">
-						<li class="list-inline-item"><a href="#">Programmation</a></li>
-						<li class="list-inline-item"><a href="#">Marketing digital</a></li>
-						<li class="list-inline-item"><a href="#">SEO</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
 
 		<div class="container jumbotron-container  mobileGround">
             <div class="row mb-4">
@@ -162,49 +126,54 @@
             </div>
         </div>
 
-		<div class="container">
+		<div class="container bg-grey sticky">
 			<div class="row">
-				<div class="col-2">
-					<h1>Links</h1>
-				</div>
-				<div class="col-12 col-md-7 my-2 p-4 blog-container">
-					<h1 id="blog-header"></h1>
-					<h2 id="blog-body"></h2>
-					<div id="body"></div>
-					<h2 id="section">SECTION</h2>
-				</div>
-				<div class="col-12 col-md-3 ">
-					<div class="container">
-						<div class="row">
-							<div class="col m-2 pub">
-								<h2>Publicités</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tenetur debitis architecto illo molestias, enim accusantium magni nemo sit dicta praesentium suscipit, incidunt nesciunt, dolorem quia distinctio nisi. Minima, quo.</p>
-							</div>
-						</div>
-					</div>
+				<div class="col second-navbar-main">
+					<ul class=" list-inline second-navbar">
+						<li class="list-inline-item"><a href="./developpement-web/">Développement web</a></li>
+						<li class="list-inline-item"><a href="#">Marketing digital</a></li>
+						<li class="list-inline-item"><a href="#">Entrepreunariat</a></li>
+						<li class="list-inline-item"><a href="#">SEO</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 
+		<?php 
+			require_once('../connexion_bd.php');
+			$connexion = connect_bd();
+			//  Récupération de l'utilisateur et de son pass hashé
+			$req = $connexion->query('SELECT * FROM articles WHERE id = 4');
+			$resultat = $req->fetch();
+			//cho $req;
+		?>
+
 		<div class="container">
-			<div class="row">
-				<div class="col">
-					<hr>
-					<div class="form-wrapper">
-					<h3>Inscrivez-vous à la newsletter pour ne rien rater</h3>
+			<div class="row content-wrapper">
+				<?php require_once('../php/social/index.php'); ?>
+				<div class="col-12 col-md-7 my-2 p-4 blog-container">
+					<h1 id="blog-header"> <?php echo $resultat['title']; ?></h1>
+					<img class='article-cover' src="../Images/undraw_conference_speaker_re_1rna.svg" alt="speaker">
+					<h2 id="blog-body"></h2>
+					<div id="body">
+						<?php echo $resultat['body']; ?>
+					</div>
+					<div class='created-at'><span><?php echo 'Posté le '.$resultat['createdAt']; ?></span></div>
+					<hr class="barre">
+					<div class="form-wrapper mt-5">
+					<h3 class='mb-2'>Inscrivez-vous à la newsletter pour ne pas rater les prochains articles</h3>
 					<span class="my-3">Les champs marqués par * sont obligatoires.</span>
 					<div id="form"></div>
-					<!-- <form method="" action="">
-						<div class="form-group my-3">
-							<label for=" nameInput">Votre nom et prenom <b>*</b></label>
-							<input type="text" class="form-control" placeholder="Complete Name" id="nameInput" required>
+					</div>
+				</div>
+				<div class="col-12 col-md-3">
+					<div class="container">
+						<div class="row">
+							<div class="col m-2 pub">
+								<h1>
+								</h1>
+							</div>
 						</div>
-						<div class="form-group my-3">
-							<label for="note">Email <b>*</b></label>
-							<input type="email" class="form-control" placeholder="Your email" id="emailInput" required>
-						</div>
-						<button type="submit" class="btn btn-primary mx-auto">Envoyez</button>
-					</form> -->
 					</div>
 				</div>
 			</div>
@@ -245,7 +214,7 @@
 
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-	<script src="news1.js"></script>
+	<!-- <script src="news1.js"></script> -->
 	<script src="../form.js"></script>
 	<script src="../responsive.js"></script>
 
@@ -257,6 +226,13 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 	</body>
+
+		<script>
+			$(document).ready(function(){
+				$("ol>li:nth-child(9)").before("<figure><img class='energy' src='../Images/energie.png' alt='energie'><figcaption>Les énergies renouvelables</figcaption></figure>");
+				$("<span>Span ajouté avec insertAfter()</span>").insertAfter("ol");
+			});
+		</script>
 
 </html>
 

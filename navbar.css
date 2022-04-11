@@ -4,7 +4,7 @@
     justify-content: flex-end;
     /* min-width: 300px; */
     align-items: center;
-    background: rgb(16, 66, 39);
+    background: rgba(16, 66, 39, 0.76);
 }
 
 .nav-right input {
