@@ -1,28 +1,36 @@
+<!doctype html>
 
-<!DOCTYPE html>
 <html lang="en">
+
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Required meta tags -->
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
 
-		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title>Developpement web</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-		<link rel="shortcut icon" href="../../Images/logo.png">
 
-		<link rel="stylesheet" href="../../css/style.css" />
-		<link rel="stylesheet" href="../../style.css" />
-		<link rel="stylesheet" href="../blog.css" />
-	</head>
-    <body>
 
-        <div class="dark-nav">
+	<!-- Bootstrap CSS -->
+	<link rel="shortcut icon" href="../../Images/logo.png">
+
+	<link rel="stylesheet" href="../../css/style.css" />
+	<link rel="stylesheet" href="../../style.css" />
+	<link rel="stylesheet" href="../blog.css" />
+
+
+
+	<title>Info School</title>
+
+	 </head>
+
+	<body>
+		<div class="dark-nav">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col">
@@ -86,9 +94,10 @@
 								  <!-- Responsive Menu -->
 								  <nav role="navigation" id="topnav_responsive_menu">
 									<ul>
-										<li class="list-inline-item"><a href="../marketing">Marketing digital</a></li>
-										<li class="list-inline-item"><a href="../entrepreunariat">Entreprenariat</a></li>
-										<li class="list-inline-item"><a href="../seo">SEO</a></li>
+										<li class="list-inline-item"><a href="../developpement-web/">Développement web</a></li>
+										<li class="list-inline-item"><a href="../marketing/">Marketing digital</a></li>
+										<li class="list-inline-item"><a href="../entreprenariat/">entreprenariat</a></li>
+										<li class="list-inline-item"><a href="../seo/">SEO</a></li>
 									</ul>
 								  </nav>
 								</div>
@@ -109,7 +118,8 @@
             </div>
         </div>
 
-        <div class="container jumbotron-container  mobileGround">
+
+		<div class="container jumbotron-container  mobileGround">
             <div class="row mb-4">
                 <div class="col">
                     <div class="jumbotron">
@@ -123,18 +133,27 @@
 			<div class="row">
 				<div class="col second-navbar-main">
 					<ul class=" list-inline second-navbar">
-						<li class="list-inline-item"><a href="./">Développement web</a></li>
-						<li class="list-inline-item"><a href="../marketing">Marketing digital</a></li>
-						<li class="list-inline-item"><a href="../entrepreunariat">Entreprenariat</a></li>
-						<li class="list-inline-item"><a href="../seo">SEO</a></li>
+						<li class="list-inline-item"><a href="../developpement-web/">Développement web</a></li>
+						<li class="list-inline-item"><a href="../marketing/">Marketing digital</a></li>
+						<li class="list-inline-item"><a href="../entreprenariat/">entreprenariat</a></li>
+						<li class="list-inline-item"><a href="../seo/">SEO</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 
+		<?php 
+			require_once('../../connexion_bd.php');
+			$connexion = connect_bd();
+			//  Récupération de l'utilisateur et de son pass hashé
+			$req = $connexion->query('SELECT title, body, DATE_FORMAT(createdAt, \'%d/%m/%Y à %Hh%imin\') AS date_poste FROM articles WHERE id = 4');
+			$resultat = $req->fetch();
+			//cho $req;
+		?>
+
 		<div class="container">
 			<div class="row content-wrapper">
-				<div class="col-lg-2 px-5 left-bar">
+				<div class="col-2 px-5 left-bar">
 					<ul class='my-4'>
 						<li class='my-4 social-media'><a href="https://www.linkedin.com/in/sandaogo-malbila/" target='_blank'><img src="../../Images/linkedin.png" alt="linkedin"></a></li>
 						<li class='my-4 social-media'><a href="#"><img src="../../Images/facebook.png" alt="facebook"></a></li>
@@ -145,41 +164,20 @@
 						<li class='my-4 social-media'><a href="#"><img src="../../Images/pinterest.png" alt="pinterest"></a></li>
 					</ul>
 				</div>
-				<div class="col-12 col-lg-7 my-2 p-4  blog-container">
-					<h1>Développement web</h1>
-					<hr>
-					<p>Ici nous diffusons l'actualité du web et de l'évolution des nouvelles technologies dans le domaine du développement web</p>
-					<div id='articles'>
-						<?php
-							require_once('../../connexion_bd.php');
-							$connexion = connect_bd();
-							$req = $connexion->query('SELECT id, category, title, body, DATE_FORMAT(createdAt, \'%d/%m/%Y à %Hh%imin\') AS createdAt, DATE_FORMAT(updatedAt, \'%d/%m/%Y à %Hh%imin\') AS updatedAt FROM articles');
-							while ($donnees = $req->fetch()) {
-								
-								$display = $donnees['createdAt'] != $donnees['updatedAt'] ? '<span>Mise à jour le '.$donnees['updatedAt'].'</span>' : null;
-						?>
-						<div class='my-5 developpement-article-liste'>
-							<img src="../../Images/energie.png" alt="article-cover">
-							<div class='developpement-article-headers'>
-								<span><?php echo $donnees['category']; ?></span>
-								<?php echo $donnees['title']; ?>
-								<div class='dates'>
-									<span>Posté le <?php echo $donnees['createdAt']; ?></span>
-									<?php echo $display; ?>
-								</div>
-							</div>
-						</div>
-						<?php
-							} 
-							$req->closeCursor();
-						?>
-						<?php require_once('../form.php'); ?>
+				<div class="col-12 col-md-7 my-2 p-4 blog-container">
+					<h1 id="blog-header"> <?php echo $resultat['title']; ?></h1>
+					<img class='article-cover' src="../../Images/undraw_conference_speaker_re_1rna.svg" alt="speaker">
+					<h2 id="blog-body"></h2>
+					<div id="body">
+						<?php echo $resultat['body']; ?>
 					</div>
+					<div class='created-at'><span><?php echo 'Posté le '.$resultat['date_poste']; ?></span></div>
+				<?php require_once('../form.php'); ?>
 				</div>
-				<div class="col-12 col-lg-3 ads-section">
+				<div class="col-12 col-md-3">
 					<div class="container">
 						<div class="row">
-							<div class="col m-2 ">
+							<div class="col m-2 pub">
 								<h1>
 								</h1>
 							</div>
@@ -188,7 +186,8 @@
 				</div>
 			</div>
 		</div>
-
+			
+			
 		<div class="bg-light">
 			<div class="container-fluid">
 				<div class="row pt-4 pb-3">
@@ -210,16 +209,38 @@
 				</div>
 			</div>
 		</div>
+		<!-- <div class="embed-responsive embed-responsive-1by1">
+			<iframe class="embed-responsive-item" width="200" height="200" src="../Bureau/[Français_]_Angular__from_scratch_(_A_to_Z_)(360p).mp4" >Tuto</iframe>
+		 </div>-->
+		 
+	
+		
+ 
 
-		<script src="../../form.js"></script>
-		<script src="../../responsive.js"></script>
-        
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<!-- Optional JavaScript -->
 
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<!-- <script src="news1.js"></script> -->
+	<script src="../../form.js"></script>
+	<script src="../../responsive.js"></script>
 
-    </body>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	</body>
+
+		<script>
+			$(document).ready(function(){
+				$("ol>li:nth-child(9)").before("<figure><img class='energy' src='../../Images/energie.png' alt='energie'><figcaption>Les énergies renouvelables</figcaption></figure>");
+				$("<span>Span ajouté avec insertAfter()</span>").insertAfter("ol");
+			});
+		</script>
+
 </html>
+

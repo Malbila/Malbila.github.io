@@ -29,7 +29,7 @@
     display: none;
   }
   
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 880px) {
     /* hide classic menu */
     #topnav_menu {
       display: none;
@@ -74,12 +74,13 @@
     top: 0;
 
     min-width: 50vw;
+    width: 100vw;
     height: 100vh;
     padding: 56px 0 0;
 
     text-align: center;
 
-    background: #ededed;
+    background: rgba(0, 0, 255);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
   }
@@ -89,8 +90,9 @@
   }
 
   #topnav_responsive_menu a {
+    font-size: 20px;
     white-space: nowrap;
-    color: #333;
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
 

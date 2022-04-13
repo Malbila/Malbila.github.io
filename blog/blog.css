@@ -1,9 +1,13 @@
+*{
+    font-family: 'Montserrat', 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+}
+
 .brand {
     border-radius: 90% 0% 90% 0%;
 }
 
 .blog-container {
-    background-color: rgba(160, 190, 190, 0.5);
+    background-color: rgba(160, 190, 190, 0.2);
     box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.3);
     /* border-radius: 32px; */
 }
@@ -29,7 +33,7 @@ p {
     margin-top: 32px;
     font-size: 1.25rem;
     word-spacing: 12px;
-    font-family: 'Trebuchet MS', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-weight: 600;
 }
 
 .jumbotron-container {
@@ -48,6 +52,12 @@ p {
     box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.7);
     transition: all linear 1s;
     /* border-radius: 32px; */
+}
+
+@media (max-width: 880px) {
+    .ads-section {
+        display: none;
+    }
 }
 
 /* .pub:hover {
@@ -149,7 +159,7 @@ p {
     text-decoration: none;
 }
 
-@media (max-width: 768px){
+@media (max-width: 991px){
     .second-navbar {
         padding: 10px 0;
         width: 100%;
@@ -167,7 +177,7 @@ p {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 880px) {
     .second-navbar-main {
         display: none;
     }
@@ -178,6 +188,7 @@ p {
     position: sticky;
     top: 0;
 }
+
 
 .barre {
     height: 3px;
@@ -206,6 +217,7 @@ p {
     background-color: #a9d3d4;
 }
 
+
 .left-bar {
     display: flex;
     flex-direction: column;
@@ -222,7 +234,7 @@ p {
    transform: scale(1.2) translateX(5px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .left-bar {
         display: none;
     }
@@ -248,4 +260,53 @@ figcaption {
     font-weight: 600;
 }
 
+.developpement-article-liste {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.developpement-article-liste img {
+    min-width: 300px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.developpement-article-liste h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 880px) {
+    .developpement-article-liste {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* align-items: center; */
+        cursor: pointer;
+    }
+}
+
+.developpement-article-headers h1, .developpement-article-headers h2, .developpement-article-headers h3{
+    font-size: 26px;
+}
+
+.developpement-article-headers span {
+    color: rgb(24, 24, 208);
+}
+
+.dates {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.dates span {
+    color: rgb(197, 88, 10);
+    font-size: 12px;
+    font-weight: 600;
+}
 /* https://www.codeur.com/-sandaogom */

@@ -1,25 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Developpement web</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../Images/logo.png">
 
-		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-
-		<title>Developpement web</title>
-
-		<link rel="shortcut icon" href="../../Images/logo.png">
-
-		<link rel="stylesheet" href="../../css/style.css" />
-		<link rel="stylesheet" href="../../style.css" />
-		<link rel="stylesheet" href="../blog.css" />
-	</head>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../blog.css" />
+</head>
     <body>
 
         <div class="dark-nav">
@@ -86,9 +80,9 @@
 								  <!-- Responsive Menu -->
 								  <nav role="navigation" id="topnav_responsive_menu">
 									<ul>
+										<li class="list-inline-item"><a href="../developpement-web">Développement web</a></li>
 										<li class="list-inline-item"><a href="../marketing">Marketing digital</a></li>
 										<li class="list-inline-item"><a href="../entrepreunariat">Entreprenariat</a></li>
-										<li class="list-inline-item"><a href="../seo">SEO</a></li>
 									</ul>
 								  </nav>
 								</div>
@@ -123,10 +117,10 @@
 			<div class="row">
 				<div class="col second-navbar-main">
 					<ul class=" list-inline second-navbar">
-						<li class="list-inline-item"><a href="./">Développement web</a></li>
+						<li class="list-inline-item"><a href="../developpement-web">Développement web</a></li>
 						<li class="list-inline-item"><a href="../marketing">Marketing digital</a></li>
 						<li class="list-inline-item"><a href="../entrepreunariat">Entreprenariat</a></li>
-						<li class="list-inline-item"><a href="../seo">SEO</a></li>
+						<li class="list-inline-item"><a href="./">SEO</a></li>
 					</ul>
 				</div>
 			</div>
@@ -134,7 +128,7 @@
 
 		<div class="container">
 			<div class="row content-wrapper">
-				<div class="col-lg-2 px-5 left-bar">
+				<div class="col-2 px-5 left-bar">
 					<ul class='my-4'>
 						<li class='my-4 social-media'><a href="https://www.linkedin.com/in/sandaogo-malbila/" target='_blank'><img src="../../Images/linkedin.png" alt="linkedin"></a></li>
 						<li class='my-4 social-media'><a href="#"><img src="../../Images/facebook.png" alt="facebook"></a></li>
@@ -145,41 +139,16 @@
 						<li class='my-4 social-media'><a href="#"><img src="../../Images/pinterest.png" alt="pinterest"></a></li>
 					</ul>
 				</div>
-				<div class="col-12 col-lg-7 my-2 p-4  blog-container">
-					<h1>Développement web</h1>
-					<hr>
-					<p>Ici nous diffusons l'actualité du web et de l'évolution des nouvelles technologies dans le domaine du développement web</p>
-					<div id='articles'>
-						<?php
-							require_once('../../connexion_bd.php');
-							$connexion = connect_bd();
-							$req = $connexion->query('SELECT id, category, title, body, DATE_FORMAT(createdAt, \'%d/%m/%Y à %Hh%imin\') AS createdAt, DATE_FORMAT(updatedAt, \'%d/%m/%Y à %Hh%imin\') AS updatedAt FROM articles');
-							while ($donnees = $req->fetch()) {
-								
-								$display = $donnees['createdAt'] != $donnees['updatedAt'] ? '<span>Mise à jour le '.$donnees['updatedAt'].'</span>' : null;
-						?>
-						<div class='my-5 developpement-article-liste'>
-							<img src="../../Images/energie.png" alt="article-cover">
-							<div class='developpement-article-headers'>
-								<span><?php echo $donnees['category']; ?></span>
-								<?php echo $donnees['title']; ?>
-								<div class='dates'>
-									<span>Posté le <?php echo $donnees['createdAt']; ?></span>
-									<?php echo $display; ?>
-								</div>
-							</div>
-						</div>
-						<?php
-							} 
-							$req->closeCursor();
-						?>
+				<div class="col-12 col-md-7 my-2 p-4 text-center blog-container">
+					<h1>SEO</h1>
+					<div>
 						<?php require_once('../form.php'); ?>
 					</div>
 				</div>
-				<div class="col-12 col-lg-3 ads-section">
+				<div class="col-12 col-md-3">
 					<div class="container">
 						<div class="row">
-							<div class="col m-2 ">
+							<div class="col m-2">
 								<h1>
 								</h1>
 							</div>

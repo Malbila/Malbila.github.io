@@ -5,4 +5,3 @@
     $req->execute(array($_POST['category'], $_POST['titre'], $_POST['body-content']));
     header('Location:./');
 ?>
-?>

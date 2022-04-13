@@ -16,7 +16,7 @@
             <div class="row">
 				<div class="col mt-5 text-center">
 					<h1>Admin Dashboard</h1>
-					<form method="POST" action="dashboard.php">
+					<form method="POST" action="update.php">
                         <div class="form-group">
 							<label for="category">Catégory :</label>
 							<input type="text" class="form-control" placeholder="catégory" id="category" name='category'>
@@ -27,7 +27,7 @@
 						</div>
 						<div class="form-group">
 							<label for="body-content">Contenu :</label>
-							<textarea class="form-control" id="body-content" name="body-content" rows="15" required></textarea>
+							<textarea class="form-control" id="body-content" name="body-content" rows="15" ></textarea>
 						</div>
 						<button type="submit" class="btn btn-primary my-2">Envoyez</button>
 					</form>

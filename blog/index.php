@@ -10,6 +10,10 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
 
 
 	<!-- Bootstrap CSS -->
@@ -60,7 +64,7 @@
 											  <ul>
 												  <li><a href="../cours/">Développement</a></li>
 												  <li><a href="#">Marketing digital</a></li>
-												  <li><a href="#">Entrepreunariat</a></li>
+												  <li><a href="#">entreprenariat</a></li>
 												  <li><a href="#">Soft Skills</a></li>
 												  <li><a href="#">Design</a></li>
 											  </ul>
@@ -131,9 +135,9 @@
 				<div class="col second-navbar-main">
 					<ul class=" list-inline second-navbar">
 						<li class="list-inline-item"><a href="./developpement-web/">Développement web</a></li>
-						<li class="list-inline-item"><a href="#">Marketing digital</a></li>
-						<li class="list-inline-item"><a href="#">Entrepreunariat</a></li>
-						<li class="list-inline-item"><a href="#">SEO</a></li>
+						<li class="list-inline-item"><a href="./marketing/">Marketing digital</a></li>
+						<li class="list-inline-item"><a href="./entreprenariat/">entreprenariat</a></li>
+						<li class="list-inline-item"><a href="./seo/">SEO</a></li>
 					</ul>
 				</div>
 			</div>
@@ -143,7 +147,7 @@
 			require_once('../connexion_bd.php');
 			$connexion = connect_bd();
 			//  Récupération de l'utilisateur et de son pass hashé
-			$req = $connexion->query('SELECT * FROM articles WHERE id = 4');
+			$req = $connexion->query('SELECT title, body, DATE_FORMAT(createdAt, \'%d/%m/%Y à %Hh%imin\') AS date_poste FROM articles WHERE id = 4');
 			$resultat = $req->fetch();
 			//cho $req;
 		?>
@@ -158,13 +162,8 @@
 					<div id="body">
 						<?php echo $resultat['body']; ?>
 					</div>
-					<div class='created-at'><span><?php echo 'Posté le '.$resultat['createdAt']; ?></span></div>
-					<hr class="barre">
-					<div class="form-wrapper mt-5">
-					<h3 class='mb-2'>Inscrivez-vous à la newsletter pour ne pas rater les prochains articles</h3>
-					<span class="my-3">Les champs marqués par * sont obligatoires.</span>
-					<div id="form"></div>
-					</div>
+					<div class='created-at'><span><?php echo 'Posté le '.$resultat['date_poste']; ?></span></div>
+				<?php require_once('./form.php'); ?>
 				</div>
 				<div class="col-12 col-md-3">
 					<div class="container">
