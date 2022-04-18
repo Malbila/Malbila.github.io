@@ -17,7 +17,7 @@
 
 
 	<!-- Bootstrap CSS -->
-	<link rel="shortcut icon" href="../../Images/logo.png">
+	<link rel="shortcut icon" href="../../Images/brand.jpg">
 
 	<link rel="stylesheet" href="../../css/style.css" />
 	<link rel="stylesheet" href="../../style.css" />

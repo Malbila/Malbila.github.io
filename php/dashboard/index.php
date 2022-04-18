@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 
-    <link rel="shortcut icon" href="../../Images/logo.png">
+    <link rel="shortcut icon" href="../../Images/brand.jpg">
 
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../style.css" />
@@ -16,7 +16,7 @@
             <div class="row">
 				<div class="col mt-5 text-center">
 					<h1>Admin Dashboard</h1>
-					<form method="POST" action="update.php">
+					<form method="POST" action="dashboard.php">
                         <div class="form-group">
 							<label for="category">Catégory :</label>
 							<input type="text" class="form-control" placeholder="catégory" id="category" name='category'>
@@ -27,7 +27,11 @@
 						</div>
 						<div class="form-group">
 							<label for="body-content">Contenu :</label>
-							<textarea class="form-control" id="body-content" name="body-content" rows="15" ></textarea>
+							<textarea class="form-control" id="body-content" name="body-content" placeholder='texte' rows="15" ></textarea>
+						</div>
+						<div class="form-group">
+							<label for="cover">Cover :</label>
+							<input type='text' class="form-control" id="cover" name="cover" placeholder='cover' >
 						</div>
 						<button type="submit" class="btn btn-primary my-2">Envoyez</button>
 					</form>

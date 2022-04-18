@@ -12,13 +12,14 @@
 
 		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
-		<title>Developpement web</title>
+		<title>Le blog du codeur inspiré</title>
 
-		<link rel="shortcut icon" href="../../Images/logo.png">
+		<link rel="shortcut icon" href="../../Images/brand.jpg">
 
 		<link rel="stylesheet" href="../../css/style.css" />
 		<link rel="stylesheet" href="../../style.css" />
 		<link rel="stylesheet" href="../blog.css" />
+		
 	</head>
     <body>
 
@@ -30,13 +31,13 @@
 							<!-- <div id="responsive"></div> -->
 							<div id="root">
 								<div id="topnav" class="topnav">
-									<a id="home_link" class="navbar-brand" href="../../">
+									<a id="home_link" class="navbar-brand" href="../">
 										<img class="brand" src="../../Images/brand.jpg" width = "50" height = "50" alt="Logo du site">  
 										Le-BDCI
 									</a>
 							  
 								  <!-- Classic Menu -->
-								  <nav role="navigation" id="topnav_menu" class="dropdown-main">
+								  <!-- <nav role="navigation" id="topnav_menu" class="dropdown-main">
 									<ul class="dropdown">
 									  <li class="topnav_link"><a href="../../">Accueil</a></li>
 									  <li class="topnav_link"><a href="javascript:void(0)">Services</a>
@@ -74,7 +75,7 @@
 									  </li>
 									  <li class="topnav_link"><a href="../../faq/">FAQ</a></li>
 								  </ul>
-								</nav>
+								</nav> -->
 							  
 								  <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
 									<!-- Some spans to act as a hamburger -->
@@ -103,7 +104,7 @@
             <div class="row my-4">
                 <div class="col backGround">
                     <div class="jumbotron">
-                        <h1 class="heroText">Le blog du codeur inspiré</h1>
+                        <h1 class="heroText">Le blog du codeur inspiré 👦 </h1>
                     </div>
                 </div>
             </div>
@@ -149,20 +150,24 @@
 					<h1>Développement web</h1>
 					<hr>
 					<p>Ici nous diffusons l'actualité du web et de l'évolution des nouvelles technologies dans le domaine du développement web</p>
+					<button class='btn btn-primary cta text-center'><a href="#form-wrapper">Je m'inscris à la newsletter</a></button>
 					<div id='articles'>
 						<?php
 							require_once('../../connexion_bd.php');
 							$connexion = connect_bd();
-							$req = $connexion->query('SELECT id, category, title, body, DATE_FORMAT(createdAt, \'%d/%m/%Y à %Hh%imin\') AS createdAt, DATE_FORMAT(updatedAt, \'%d/%m/%Y à %Hh%imin\') AS updatedAt FROM articles');
+							$req = $connexion->query('SELECT id, category, title, body, cover, DATE_FORMAT(createdAt, \'%d/%m/%Y à %Hh%imin\') AS createdAt, DATE_FORMAT(updatedAt, \'%d/%m/%Y à %Hh%imin\') AS updatedAt FROM articles');
 							while ($donnees = $req->fetch()) {
 								
 								$display = $donnees['createdAt'] != $donnees['updatedAt'] ? '<span>Mise à jour le '.$donnees['updatedAt'].'</span>' : null;
+								$cover = "../../collection/".$donnees['cover'];
+								$title = $donnees['title'];
 						?>
-						<div class='my-5 developpement-article-liste'>
-							<img src="../../Images/energie.png" alt="article-cover">
+						
+						<div  id='developpement-article-liste' class='my-5 developpement-article-liste'>
+							<img src=<?php echo $cover; ?> alt="article-cover">
 							<div class='developpement-article-headers'>
 								<span><?php echo $donnees['category']; ?></span>
-								<?php echo $donnees['title']; ?>
+								<h2><?php echo $donnees['title']; ?></h2>
 								<div class='dates'>
 									<span>Posté le <?php echo $donnees['createdAt']; ?></span>
 									<?php echo $display; ?>
@@ -189,27 +194,91 @@
 			</div>
 		</div>
 
-		<div class="bg-light">
-			<div class="container-fluid">
-				<div class="row pt-4 pb-3">
-					<div class="col">
-						<ul class="list-inline text-center">
-							<li class="list-inline-item">
-								<a href="#">À propos</a>
-							</li>
-							<li class="list-inline-item">&middot;</li>
-							<li class="list-inline-item">
-								<a href="#">Vie privée</a>
-							</li>
-							<li class="list-inline-item">&middot;</li>
-							<li class="list-inline-item">
-								<a href="#">Conditions d'utilisations</a>
-							</li>
-						</ul>
+		<hr>
+
+		<footer>
+			<div class="bg-light">
+				<div class="container">
+					<div class="row same-theme p-2">
+						<h3 class='text-center'>Du même thème</h3>
+						<div class="col-12 col-md-6 my-2">
+							<div class="card">
+								<div class="card-body bg-success">
+									<h3 class="card-title">Card 1</h3>
+									<p class="card-text"><a class='stretched-link' href="#">Lorem ipsum dolor sit amet</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 my-2">
+							<div class="card">
+								<div class="card-body bg-success">
+									<h3 class="card-title">Card 2</h3>
+									<p class="card-text"><a class='stretched-link' href="#">Lorem ipsum dolor sit amet</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 my-2">
+							<div class="card">
+								<div class="card-body bg-success">
+									<h3 class="card-title">Card 3</h3>
+									<p class="card-text"><a class='stretched-link' href="#">Lorem ipsum dolor sit amet</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 my-2">
+							<div class="card">
+								<div class="card-body bg-success">
+									<h3 class="card-title">Card 4</h3>
+									<p class="card-text"><a class='stretched-link' href="#">Lorem ipsum dolor sit amet</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col my-4">
+							<h4 class='text-center'>Liens utiles</h4>
+							<ul class="useful-links">
+								<li><a href="#">Site web</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contact personnel</a></li>
+								<li><a href="#">Lorem, ipsum dolor.</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col text-center">
+							<h3>Rejoignez nous sur les réseaux sociaux</h3>
+							<ul class='my-4 '>
+								<li class='my-4 list-inline-item footer-social-media'><a href="https://www.linkedin.com/in/sandaogo-malbila/" target='_blank'><img src="../../Images/linkedin.png" alt="linkedin"></a></li>
+								<li class='my-4 list-inline-item footer-social-media'><a href="#"><img src="../../Images/facebook.png" alt="facebook"></a></li>
+								<li class='my-4 list-inline-item footer-social-media'><a href="https://twitter.com/s_malbila/" target='_blank'><img src="../../Images/twitter.png" alt="twitter"></a></li>
+								<li class='my-4 list-inline-item footer-social-media'><a href="https://api.whatsapp.com/send?phone=22656519733" target='_blank'><img src="../../Images/whatsapp.png" alt="whatsapp"></a></li>
+								<li class='my-4 list-inline-item footer-social-media'><a href="#"><img src="../../Images/instagram.png" alt="instagram"></a></li>
+								<li class='my-4 list-inline-item footer-social-media'><a href="#"><img src="../../Images/youtube.png" alt="youtube"></a></li>
+								<li class='my-4 list-inline-item footer-social-media'><a href="#"><img src="../../Images/pinterest.png" alt="pinterest"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row pt-4 pb-3">
+						<div class="col">
+							<ul class="list-inline text-center">
+								<li class="list-inline-item">
+									<a href="#">À propos</a>
+								</li>
+								<li class="list-inline-item">&middot;</li>
+								<li class="list-inline-item">
+									<a href="#">Vie privée</a>
+								</li>
+								<li class="list-inline-item">&middot;</li>
+								<li class="list-inline-item">
+									<a href="#">Conditions d'utilisations</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</footer>
 
 		<script src="../../form.js"></script>
 		<script src="../../responsive.js"></script>

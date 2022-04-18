@@ -17,7 +17,7 @@
 
 
 	<!-- Bootstrap CSS -->
-	<link rel="shortcut icon" href="../Images/logo.png">
+	<link rel="shortcut icon" href="../Images/brand.jpg">
 
 	<link rel="stylesheet" href="../css/style.css" />
 	<link rel="stylesheet" href="../style.css" />
@@ -38,13 +38,13 @@
 							<!-- <div id="responsive"></div> -->
 							<div id="root">
 								<div id="topnav" class="topnav">
-									<a id="home_link" class="navbar-brand" href="../">
+									<a id="home_link" class="navbar-brand" href="./">
 										<img class="brand" src="../Images/brand.jpg" width = "50" height = "50" alt="Logo du site">  
 										Le-BDCI
 									</a>
 							  
 								  <!-- Classic Menu -->
-								  <nav role="navigation" id="topnav_menu" class="dropdown-main">
+								  <!-- <nav role="navigation" id="topnav_menu" class="dropdown-main">
 									<ul class="dropdown">
 									  <li class="topnav_link"><a href="../">Accueil</a></li>
 									  <li class="topnav_link"><a href="javascript:void(0)">Services</a>
@@ -82,7 +82,7 @@
 									  </li>
 									  <li class="topnav_link"><a href="../faq/">FAQ</a></li>
 								  </ul>
-								</nav>
+								</nav> -->
 							  
 								  <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
 									<!-- Some spans to act as a hamburger -->
@@ -94,11 +94,10 @@
 								  <!-- Responsive Menu -->
 								  <nav role="navigation" id="topnav_responsive_menu">
 									<ul>
-										<li><a href="../">Accueil</a></li>
-									  	<li><a href="../cours/courses/">Cours</a></li>
-									  	<li><a href="../services/">Services</a></li>
-									  	<li><a href="../espace-clients/">Espace clients</a></li>
-									  	<li><a href="../faq/">FAQ</a></li>
+										<li class="list-inline-item"><a href="./developpement-web/">Développement web</a></li>
+										<li class="list-inline-item"><a href="./marketing/">Marketing digital</a></li>
+										<li class="list-inline-item"><a href="./entreprenariat/">entreprenariat</a></li>
+										<li class="list-inline-item"><a href="./seo/">SEO</a></li>
 									</ul>
 								  </nav>
 								</div>

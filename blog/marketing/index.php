@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
-    <title>Developpement web</title>
+    <title>Le blog du codeur inspiré</title>
 
-    <link rel="shortcut icon" href="../../Images/logo.png">
+    <link rel="shortcut icon" href="../../Images/brand.jpg">
 
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../style.css" />
@@ -24,13 +24,13 @@
 							<!-- <div id="responsive"></div> -->
 							<div id="root">
 								<div id="topnav" class="topnav">
-									<a id="home_link" class="navbar-brand" href="../../">
+									<a id="home_link" class="navbar-brand" href="../">
 										<img class="brand" src="../../Images/brand.jpg" width = "50" height = "50" alt="Logo du site">  
 										Le-BDCI
 									</a>
 							  
 								  <!-- Classic Menu -->
-								  <nav role="navigation" id="topnav_menu" class="dropdown-main">
+								  <!-- <nav role="navigation" id="topnav_menu" class="dropdown-main">
 									<ul class="dropdown">
 									  <li class="topnav_link"><a href="../../">Accueil</a></li>
 									  <li class="topnav_link"><a href="javascript:void(0)">Services</a>
@@ -68,7 +68,7 @@
 									  </li>
 									  <li class="topnav_link"><a href="../../faq/">FAQ</a></li>
 								  </ul>
-								</nav>
+								</nav> -->
 							  
 								  <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
 									<!-- Some spans to act as a hamburger -->
@@ -139,8 +139,8 @@
 						<li class='my-4 social-media'><a href="#"><img src="../../Images/pinterest.png" alt="pinterest"></a></li>
 					</ul>
 				</div>
-				<div class="col-12 col-md-7 my-2 p-4 text-center blog-container">
-					<h1>Marketing</h1>
+				<div class="col-12 col-md-7 my-2 p-4  blog-container">
+					<h1>Marketing digital</h1>
 					<div>
 						<?php require_once('../form.php'); ?>
 					</div>
